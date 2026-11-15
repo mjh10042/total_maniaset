@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dan</title>
+  <link rel="stylesheet" href="../shared/tm-style.css" />
+  <script src="../shared/tm-core.js"></script>
+  <script src="../shared/tm-dan.js"></script>
+  <script src="../shared/tm-engine.js"></script>
+</head>
+
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (TM.isStandalonePreview) document.body.classList.add('tm-preview');
+      const dan = new TM.DanPanel(document.body, { assetBase: '../shared/' });
+      // built-in DanOverlay engine (Web Worker) — nothing to launch besides tosu
+      const engine = TM.localEngine({
+        onPayload: (p) => dan.onEngine(p),
+        onStatus: (online, reason) => dan.onEngineStatus(online, reason),
+      });
+      TM.instances = { dan, engine }; // handy from the devtools console
+      // drawn at its own scale (TM.zoomPage): added in tosu's manager at scale 1, it is already its size
+      const scale = { uiScaleDan: TM.PAGE_SCALE_DEFAULTS.uiScaleDan };
+      TM.settings(Object.assign({}, TM.DAN_DEFAULTS, scale), (s) => {
+        TM.zoomPage(s.uiScaleDan);
+        dan.applySettings(s);
+        engine.setEngine(s.danEngine);
+        engine.set7kModel(s.dan7kModel);
+      });
+      TM.v2(
+        (d) => {
+          dan.onV2(d);
+          engine.onV2(d);
+        },
+        TM.mergeFilters(TM.DAN_V2_FILTERS, TM.ENGINE_V2_FILTERS),
+        (connected) => engine.onTosuStatus(connected),
+      );
+    });
+  </script>
+</body>
+
+</html>

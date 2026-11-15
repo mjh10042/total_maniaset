@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>judgement</title>
+  <link rel="stylesheet" href="../shared/tm-style.css" />
+  <style>
+    /* same page layout as breadles' overlay (920×90, centred) */
+    body { display: flex; justify-content: center; }
+  </style>
+  <script src="../shared/tm-core.js"></script>
+  <script src="../shared/tm-hiterror.js"></script>
+</head>
+
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (TM.isStandalonePreview) document.body.classList.add('tm-preview');
+      const bar = new TM.HitErrorBar(document.body);
+      TM.settings(TM.HITERROR_DEFAULTS, (s) => bar.applySettings(s));
+      TM.v2((d) => bar.onV2(d), TM.HITERROR_V2_FILTERS);
+      TM.precise((d) => bar.onPrecise(d), ['hitErrors', 'currentTime']);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,752 @@
+[
+    {
+        "uniqueID": "hHiterror",
+        "type": "header",
+        "title": "judgement (Custom Hit Error Bar by breadles 호환)",
+        "description": "",
+        "options": [],
+        "value": ""
+    },
+    {
+        "uniqueID": "color300g",
+        "type": "color",
+        "title": "300g (MAX) 색",
+        "description": "",
+        "options": [],
+        "value": "#ffffff"
+    },
+    {
+        "uniqueID": "color300",
+        "type": "color",
+        "title": "300 색",
+        "description": "",
+        "options": [],
+        "value": "#ffff00"
+    },
+    {
+        "uniqueID": "color200",
+        "type": "color",
+        "title": "200 색",
+        "description": "",
+        "options": [],
+        "value": "#00ff40"
+    },
+    {
+        "uniqueID": "color100",
+        "type": "color",
+        "title": "100 색",
+        "description": "",
+        "options": [],
+        "value": "#0080c0"
+    },
+    {
+        "uniqueID": "color50",
+        "type": "color",
+        "title": "50 색",
+        "description": "",
+        "options": [],
+        "value": "#8000ff"
+    },
+    {
+        "uniqueID": "color0",
+        "type": "color",
+        "title": "Miss 색",
+        "description": "",
+        "options": [],
+        "value": "#ff0000"
+    },
+    {
+        "uniqueID": "TimingWindowOpacity",
+        "type": "number",
+        "title": "판정 구간 배경 불투명도 (0 - 1)",
+        "description": "",
+        "options": [],
+        "value": 0
+    },
+    {
+        "uniqueID": "timingWindowHeight",
+        "type": "number",
+        "title": "판정 구간 높이 (중앙선 높이의 %)",
+        "description": "",
+        "options": [],
+        "value": 40
+    },
+    {
+        "uniqueID": "colorArrowEarly",
+        "type": "color",
+        "title": "화살표 색 (빠름)",
+        "description": "",
+        "options": [],
+        "value": "#0080ff"
+    },
+    {
+        "uniqueID": "colorArrowLate",
+        "type": "color",
+        "title": "화살표 색 (느림)",
+        "description": "",
+        "options": [],
+        "value": "#ff0000"
+    },
+    {
+        "uniqueID": "colorArrowPerfect",
+        "type": "color",
+        "title": "화살표 색 (정확)",
+        "description": "",
+        "options": [],
+        "value": "#ffffff"
+    },
+    {
+        "uniqueID": "arrowSize",
+        "type": "number",
+        "title": "화살표 크기 (px)",
+        "description": "",
+        "options": [],
+        "value": 25
+    },
+    {
+        "uniqueID": "perfectArrowThreshold",
+        "type": "number",
+        "title": "정확 판정 화살표 범위 (ms)",
+        "description": "",
+        "options": [],
+        "value": 5
+    },
+    {
+        "uniqueID": "colorBar",
+        "type": "color",
+        "title": "중앙선 색",
+        "description": "",
+        "options": [],
+        "value": "#bf0000"
+    },
+    {
+        "uniqueID": "barWidth",
+        "type": "number",
+        "title": "중앙선 두께 (px)",
+        "description": "",
+        "options": [],
+        "value": 8
+    },
+    {
+        "uniqueID": "barHeight",
+        "type": "number",
+        "title": "중앙선 높이 (px)",
+        "description": "",
+        "options": [],
+        "value": 60
+    },
+    {
+        "uniqueID": "tickWidth",
+        "type": "number",
+        "title": "틱 두께 (px)",
+        "description": "",
+        "options": [],
+        "value": 8
+    },
+    {
+        "uniqueID": "tickHeight",
+        "type": "number",
+        "title": "틱 높이 (px)",
+        "description": "",
+        "options": [],
+        "value": 40
+    },
+    {
+        "uniqueID": "tickOpacity",
+        "type": "number",
+        "title": "틱 불투명도 (0 - 1)",
+        "description": "",
+        "options": [],
+        "value": 0.75
+    },
+    {
+        "uniqueID": "tickDuration",
+        "type": "number",
+        "title": "틱 유지 시간 (ms)",
+        "description": "",
+        "options": [],
+        "value": 500
+    },
+    {
+        "uniqueID": "fadeOutDuration",
+        "type": "number",
+        "title": "틱 페이드아웃 시간 (ms)",
+        "description": "",
+        "options": [],
+        "value": 800
+    },
+    {
+        "uniqueID": "isRounded",
+        "type": "number",
+        "title": "모서리 둥글기 (%)",
+        "description": "",
+        "options": [],
+        "value": 100
+    },
+    {
+        "uniqueID": "useCustomTimingWindows",
+        "type": "checkbox",
+        "title": "판정 구간 직접 지정",
+        "description": "켜면 아래 값을 그대로 판정 구간으로 씀",
+        "options": [],
+        "value": false
+    },
+    {
+        "uniqueID": "customTimingWindows",
+        "type": "text",
+        "title": "판정 구간 (ms, 쉼표 5개)",
+        "description": "",
+        "options": [],
+        "value": "16.5,64,97,127,151"
+    },
+    {
+        "uniqueID": "hJplus",
+        "type": "header",
+        "title": "judgement+ (판정선 + 내 정확도·점수)",
+        "description": "",
+        "options": [],
+        "value": ""
+    },
+    {
+        "uniqueID": "jpShowTime",
+        "type": "checkbox",
+        "title": "시간 바 표시 (판정선 오른쪽 끝)",
+        "description": "첫 노트부터 마지막 노트까지의 진행을 짧은 바로",
+        "options": [],
+        "value": true
+    },
+    {
+        "uniqueID": "jpTimeFill",
+        "type": "options",
+        "title": "시간 바 채우기",
+        "description": "Elapsed: 지난 만큼 차오름 · Remaining: 남은 만큼 줄어듦",
+        "options": [
+            "Elapsed",
+            "Remaining"
+        ],
+        "value": "Elapsed"
+    },
+    {
+        "uniqueID": "jpTimeWidth",
+        "type": "number",
+        "title": "시간 바 길이 (px)",
+        "description": "",
+        "options": [],
+        "value": 240
+    },
+    {
+        "uniqueID": "jpTimeHeight",
+        "type": "number",
+        "title": "시간 바 두께 (px)",
+        "description": "",
+        "options": [],
+        "value": 12
+    },
+    {
+        "uniqueID": "jpTextSize",
+        "type": "number",
+        "title": "글자 크기 (px)",
+        "description": "정확도·점수 글자 크기. 더 키우면 상자 높이도 늘리세요",
+        "options": [],
+        "value": 34
+    },
+    {
+        "uniqueID": "hHitcount",
+        "type": "header",
+        "title": "hitcount",
+        "description": "",
+        "options": [],
+        "value": ""
+    },
+    {
+        "uniqueID": "hcStyle",
+        "type": "options",
+        "title": "모양",
+        "description": "Column: 세로 목록 (배경 없음) · Box: 2ky hitcount 박스",
+        "options": [
+            "Column",
+            "Box"
+        ],
+        "value": "Column"
+    },
+    {
+        "uniqueID": "hcLabels",
+        "type": "text",
+        "title": "라벨 (쉼표로 7개)",
+        "description": "",
+        "options": [],
+        "value": "MA,PR,GR,GD,BD,MS,UR"
+    },
+    {
+        "uniqueID": "hcShowDelay",
+        "type": "number",
+        "title": "플레이 시작 후 표시 지연 (ms)",
+        "description": "",
+        "options": [],
+        "value": 1000
+    },
+    {
+        "uniqueID": "hcShowGrade",
+        "type": "checkbox",
+        "title": "등급 표시 (Column)",
+        "description": "",
+        "options": [],
+        "value": true
+    },
+    {
+        "uniqueID": "hcAccDecimals",
+        "type": "options",
+        "title": "정확도 소수 자릿수 (Column, 최대 4)",
+        "description": "정확도를 소수 몇째 자리까지",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "value": "4"
+    },
+    {
+        "uniqueID": "hcRatios",
+        "type": "options",
+        "title": "비율 표시 (Column)",
+        "description": "",
+        "options": [
+            "MA:PR · MA:GR · PR:GR",
+            "MA:PR",
+            "Off"
+        ],
+        "value": "MA:PR · MA:GR · PR:GR"
+    },
+    {
+        "uniqueID": "hcShowUr",
+        "type": "checkbox",
+        "title": "UR 표시",
+        "description": "",
+        "options": [],
+        "value": true
+    },
+    {
+        "uniqueID": "hcShowFastLate",
+        "type": "checkbox",
+        "title": "판정별 빠름/느림 표시 (Column)",
+        "description": "PR~MS 숫자 왼쪽에 빠름(빨강), 오른쪽에 느림(파랑) 개수 (MA 제외)",
+        "options": [],
+        "value": true
+    },
+    {
+        "uniqueID": "hcFastLateSize",
+        "type": "number",
+        "title": "빠름/느림 글자 크기 (px, Column)",
+        "description": "판정 숫자 옆 작은 숫자의 크기",
+        "options": [],
+        "value": 18
+    },
+    {
+        "uniqueID": "hcShowBar",
+        "type": "checkbox",
+        "title": "하단 비율 바 표시 (Box)",
+        "description": "",
+        "options": [],
+        "value": true
+    },
+    {
+        "uniqueID": "hcBgColor",
+        "type": "color",
+        "title": "배경 색 (Box)",
+        "description": "",
+        "options": [],
+        "value": "#262626"
+    },
+    {
+        "uniqueID": "hcValueColor",
+        "type": "color",
+        "title": "숫자 색",
+        "description": "",
+        "options": [],
+        "value": "#ffffff"
+    },
+    {
+        "uniqueID": "hcColor300g",
+        "type": "color",
+        "title": "MA 색",
+        "description": "",
+        "options": [],
+        "value": "#bfeaff"
+    },
+    {
+        "uniqueID": "hcColor300",
+        "type": "color",
+        "title": "PR 색",
+        "description": "",
+        "options": [],
+        "value": "#ffd54a"
+    },
+    {
+        "uniqueID": "hcColor200",
+        "type": "color",
+        "title": "GR 색",
+        "description": "",
+        "options": [],
+        "value": "#4ee07a"
+    },
+    {
+        "uniqueID": "hcColor100",
+        "type": "color",
+        "title": "GD 색",
+        "description": "",
+        "options": [],
+        "value": "#4f8dff"
+    },
+    {
+        "uniqueID": "hcColor50",
+        "type": "color",
+        "title": "BD 색",
+        "description": "",
+        "options": [],
+        "value": "#c77dff"
+    },
+    {
+        "uniqueID": "hcColor0",
+        "type": "color",
+        "title": "MS 색",
+        "description": "",
+        "options": [],
+        "value": "#ff4d5e"
+    },
+    {
+        "uniqueID": "hcColorUr",
+        "type": "color",
+        "title": "UR 색",
+        "description": "",
+        "options": [],
+        "value": "#ffffff"
+    },
+    {
+        "uniqueID": "hFastslow",
+        "type": "header",
+        "title": "fastslow (노트마다 판정 ms: 느리면 +, 빠르면 −)",
+        "description": "",
+        "options": [],
+        "value": ""
+    },
+    {
+        "uniqueID": "fsShow",
+        "type": "options",
+        "title": "표시",
+        "description": "둘 다: FAST/SLOW 글자 + 수치 · FAST/SLOW만: 글자를 크게 · 수치만: +12 ms",
+        "options": [
+            "둘 다",
+            "FAST/SLOW만",
+            "수치만"
+        ],
+        "value": "FAST/SLOW만"
+    },
+    {
+        "uniqueID": "fsColorFast",
+        "type": "color",
+        "title": "빠름(−) 색",
+        "description": "",
+        "options": [],
+        "value": "#ff7a7a"
+    },
+    {
+        "uniqueID": "fsColorSlow",
+        "type": "color",
+        "title": "느림(+) 색",
+        "description": "",
+        "options": [],
+        "value": "#6cb6ff"
+    },
+    {
+        "uniqueID": "fsHold",
+        "type": "number",
+        "title": "표시 시간 (초)",
+        "description": "마지막 노트 뒤 이만큼 보이고 사라짐 (0이면 다음 노트까지 계속)",
+        "options": [],
+        "value": 1
+    },
+    {
+        "uniqueID": "fsHideWithin",
+        "type": "number",
+        "title": "이 안쪽은 숨김 (ms)",
+        "description": "오차가 이 값 이하인 노트는 표시하지 않음 (0이면 모두 표시)",
+        "options": [],
+        "value": 16.5
+    },
+    {
+        "uniqueID": "fsDecimals",
+        "type": "options",
+        "title": "소수 자릿수 (lazer, 최대 2)",
+        "description": "lazer는 소수까지 줌. stable은 tosu가 정수 ms만 줘서 소수 없이 보임",
+        "options": [
+            "0",
+            "1",
+            "2"
+        ],
+        "value": "2"
+    },
+    {
+        "uniqueID": "hDan",
+        "type": "header",
+        "title": "dan (DanOverlay 엔진 내장)",
+        "description": "",
+        "options": [],
+        "value": ""
+    },
+    {
+        "uniqueID": "uiScaleDan",
+        "type": "number",
+        "title": "크기 배율 (dan, 0.2 - 3)",
+        "description": "dan을 이 크기로 그림. 매니저에서 배율을 이미 줄였다면 1로",
+        "options": [],
+        "value": 0.9
+    },
+    {
+        "uniqueID": "danEngine",
+        "type": "options",
+        "title": "4K 계산 엔진",
+        "description": "2.3.5+MMA 평균: 가장 정확 (기본) · 2.3.5: DanOverlay 원본 · MMA: ManiaMapAnalyser",
+        "options": [
+            "2.3.5+MMA 평균",
+            "2.3.5",
+            "MMA"
+        ],
+        "value": "2.3.5+MMA 평균"
+    },
+    {
+        "uniqueID": "dan7kModel",
+        "type": "options",
+        "title": "7K 판정 모델",
+        "description": "total_maniaset: 공식 7K 단으로 보정 (기본) · DanOverlay: 원본",
+        "options": [
+            "total_maniaset",
+            "DanOverlay"
+        ],
+        "value": "total_maniaset"
+    },
+    {
+        "uniqueID": "danStyle",
+        "type": "options",
+        "title": "모양",
+        "description": "Minimal: 글자만 (배경 없음) · Card: DanOverlay Modern 카드",
+        "options": [
+            "Minimal",
+            "Card"
+        ],
+        "value": "Minimal"
+    },
+    {
+        "uniqueID": "danNameSize",
+        "type": "number",
+        "title": "단 이름 글자 크기 (px, Minimal)",
+        "description": "긴 이름은 자동으로 줄어듦",
+        "options": [],
+        "value": 56
+    },
+    {
+        "uniqueID": "danDensityGraph",
+        "type": "checkbox",
+        "title": "노트 밀도 그래프 배경 (Minimal)",
+        "description": "초당 노트 수 그래프를 dan 뒤에 옅게",
+        "options": [],
+        "value": true
+    },
+    {
+        "uniqueID": "danDensityOpacity",
+        "type": "number",
+        "title": "노트 밀도 그래프 진하기 (0 - 1, Minimal)",
+        "description": "",
+        "options": [],
+        "value": 0.5
+    },
+    {
+        "uniqueID": "danBpmResponse",
+        "type": "options",
+        "title": "BPM 실시간 표시 (변속 맵)",
+        "description": "Every beat: 타이밍마다 그대로 · Fast: 2초 중앙값 · Smooth: 5초 (덜 바뀜)",
+        "options": [
+            "Every beat",
+            "Fast",
+            "Smooth"
+        ],
+        "value": "Every beat"
+    },
+    {
+        "uniqueID": "danScoringMode",
+        "type": "options",
+        "title": "단 기준 (Scoring mode)",
+        "description": "단 이름 기준. 4K 계산 엔진은 Reform에만 적용, LN 45% 초과 맵은 LN Course",
+        "options": [
+            "Reform",
+            "Celestial",
+            "Signicial",
+            "Shoegazer"
+        ],
+        "value": "Reform"
+    },
+    {
+        "uniqueID": "danShowPp",
+        "type": "checkbox",
+        "title": "pp 표시",
+        "description": "플레이 중: 지금까지 · 결과: 최종 · 곡 선택: SS pp",
+        "options": [],
+        "value": true
+    },
+    {
+        "uniqueID": "danPerf",
+        "type": "checkbox",
+        "title": "플레이 중 실력 단 추정 (4K, LN 45% 이하)",
+        "description": "판정마다 지금 정확도로 몇 단 수준인지 LIVE 표시 (맵을 96%면 그 맵의 단)",
+        "options": [],
+        "value": true
+    },
+    {
+        "uniqueID": "danPerfMinNotes",
+        "type": "number",
+        "title": "실력 단 추정 시작 노트 수",
+        "description": "판정이 이만큼 쌓인 뒤부터 표시",
+        "options": [],
+        "value": 300
+    },
+    {
+        "uniqueID": "danShowPause",
+        "type": "checkbox",
+        "title": "일시정지 횟수 표시 (PAUSE ×횟수)",
+        "description": "일시정지하면 그 판 동안 LIVE 자리에 PAUSE ×횟수 표시",
+        "options": [],
+        "value": true
+    },
+    {
+        "uniqueID": "danShowWhen",
+        "type": "options",
+        "title": "표시 시점",
+        "description": "",
+        "options": [
+            "Always",
+            "Song select only",
+            "Gameplay only"
+        ],
+        "value": "Always"
+    },
+    {
+        "uniqueID": "danLayout",
+        "type": "options",
+        "title": "레이아웃 (Card)",
+        "description": "Full 700×320 · Simplified 700×220 · Compact 700×76",
+        "options": [
+            "Full",
+            "Simplified",
+            "Compact"
+        ],
+        "value": "Full"
+    },
+    {
+        "uniqueID": "danShowBackground",
+        "type": "checkbox",
+        "title": "맵 배경 이미지 표시 (Card)",
+        "description": "",
+        "options": [],
+        "value": true
+    },
+    {
+        "uniqueID": "danBgBrightness",
+        "type": "number",
+        "title": "배경 밝기 (0 - 1, Card)",
+        "description": "",
+        "options": [],
+        "value": 0.85
+    },
+    {
+        "uniqueID": "danBlur",
+        "type": "number",
+        "title": "배경 흐림 (px, Card)",
+        "description": "",
+        "options": [],
+        "value": 12
+    },
+    {
+        "uniqueID": "danShowResult",
+        "type": "checkbox",
+        "title": "곡 종료 시 Clear/FAILED 표시 (Card)",
+        "description": "",
+        "options": [],
+        "value": true
+    },
+    {
+        "uniqueID": "hSections",
+        "type": "header",
+        "title": "total_maniaset 구간별 단 (4K·7K 맵)",
+        "description": "",
+        "options": [],
+        "value": ""
+    },
+    {
+        "uniqueID": "uiScaleTotal",
+        "type": "number",
+        "title": "크기 배율 (total_maniaset 창, 0.2 - 3)",
+        "description": "total_maniaset 창을 이 크기로 그림",
+        "options": [],
+        "value": 1
+    },
+    {
+        "uniqueID": "secColorKiai",
+        "type": "color",
+        "title": "하이라이트 줄 색 (키아이)",
+        "description": "키아이 구간의 글자 색",
+        "options": [],
+        "value": "#ffb067"
+    },
+    {
+        "uniqueID": "secColorPeak",
+        "type": "color",
+        "title": "하이라이트 줄 색 (추정)",
+        "description": "키아이는 아니지만 두드러지는 구간(추정)의 글자 색",
+        "options": [],
+        "value": "#b9a6ff"
+    },
+    {
+        "uniqueID": "secColorSpike",
+        "type": "color",
+        "title": "순간 난이도 줄 색",
+        "description": "앞뒤보다 1단 이상 확 어려운 순간의 글자 색",
+        "options": [],
+        "value": "#ff7a8c"
+    },
+    {
+        "uniqueID": "secCellLabels",
+        "type": "options",
+        "title": "실시간 칸 이름",
+        "description": "English: −3sec. · now · +3sec. / 한국어: −3초 · 지금 · +3초 (숫자는 양옆 칸 초)",
+        "options": [
+            "English",
+            "한국어"
+        ],
+        "value": "English"
+    },
+    {
+        "uniqueID": "secCellSpan",
+        "type": "number",
+        "title": "실시간 양옆 칸 (초, 1 - 10)",
+        "description": "양옆 칸이 지금보다 몇 초 앞·뒤를 보여 줄지",
+        "options": [],
+        "value": 3
+    },
+    {
+        "uniqueID": "secNowOnly",
+        "type": "checkbox",
+        "title": "실시간 칸: 지금만 보기",
+        "description": "켜면 가운데(지금) 칸 하나만 보임",
+        "options": [],
+        "value": false
+    },
+    {
+        "uniqueID": "secLiveDelay",
+        "type": "number",
+        "title": "실시간 칸 지연 (초, -3 - 5)",
+        "description": "칸이 곡보다 이만큼 늦게 따라감 (음수면 먼저, 0 = 지금 치는 노트)",
+        "options": [],
+        "value": -0.25
+    }
+]

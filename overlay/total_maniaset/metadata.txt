@@ -1,0 +1,7 @@
+Usecase: Ingame Overlay, OBS Overlay
+Name: total_maniaset
+Version: 1.0.0
+Author: kimlachal
+CompatibleWith: Tosu
+Resolution: 680x301
+authorLinks: https://github.com/mjh10042/total_maniaset

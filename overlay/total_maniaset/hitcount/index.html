@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hitcount</title>
+  <link rel="stylesheet" href="../shared/vendor/odometer-theme.css" />
+  <link rel="stylesheet" href="../shared/tm-style.css" />
+  <script>window.odometerOptions = { auto: false };</script>
+  <script src="../shared/vendor/odometer.js"></script>
+  <script src="../shared/tm-core.js"></script>
+  <script src="../shared/tm-hiterror.js"></script><!-- TM.timingWindows for the fast / late split -->
+  <script src="../shared/tm-hitcount.js"></script>
+</head>
+
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (TM.isStandalonePreview) document.body.classList.add('tm-preview');
+      const hc = new TM.HitCount(document.body);
+      TM.settings(TM.HITCOUNT_DEFAULTS, (s) => hc.applySettings(s));
+      TM.v2((d) => hc.onV2(d), TM.HITCOUNT_V2_FILTERS);
+      TM.precise((d) => hc.onPrecise(d), TM.HITCOUNT_PRECISE_FILTERS);
+    });
+  </script>
+</body>
+
+</html>

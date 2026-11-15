@@ -1,0 +1,7 @@
+Usecase: Ingame Overlay, OBS Overlay
+Name: fastslow
+Version: 1.0.0
+Author: kimlachal
+CompatibleWith: Tosu
+Resolution: 310x100
+authorLinks: https://github.com/mjh10042/total_maniaset

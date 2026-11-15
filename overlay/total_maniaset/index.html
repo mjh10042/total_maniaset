@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>total_maniaset</title>
+  <!-- Dan course accuracy per song (shared/tm-course.js) on the recognised dan courses; any other map's
+       "artist - title [version]", with the dan per section of a 4K / 7K one under it (shared/tm-sections.js,
+       with the dan engine in a worker).
+       This folder also holds the settings of the judgement / hitcount / dan pages (settings.json). -->
+  <link rel="stylesheet" href="shared/tm-style.css" />
+  <script src="shared/tm-core.js"></script>
+  <script src="shared/tm-course.js"></script>
+  <script src="shared/tm-sections.js"></script>
+</head>
+
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (TM.isStandalonePreview) document.body.classList.add('tm-preview');
+      const course = new TM.CoursePanel(document.body);
+      const sections = new TM.SectionPanel(document.body);
+      sections.onShown = (shown) => course.root.classList.toggle('is-covered', shown);
+      TM.instances = { course, sections }; // handy from the devtools console
+      // drawn at its own scale (TM.zoomPage): added in tosu's manager at scale 1, it is already its size
+      const scale = { uiScaleTotal: TM.PAGE_SCALE_DEFAULTS.uiScaleTotal };
+      TM.settings(Object.assign({}, TM.COURSE_DEFAULTS, TM.SECTION_DEFAULTS, scale), (s) => {
+        TM.zoomPage(s.uiScaleTotal);
+        course.applySettings(s);
+        sections.applySettings(s);
+      });
+      // each on its own, so a failure in one never holds back the other for that update
+      const each = (name, fn) => {
+        try {
+          fn();
+        } catch (err) {
+          console.error('[total_maniaset]', name, err);
+        }
+      };
+      TM.v2((d) => {
+        each('course', () => course.onV2(d));
+        each('sections', () => sections.onV2(d));
+      }, TM.mergeFilters(TM.COURSE_V2_FILTERS, TM.SECTION_V2_FILTERS));
+    });
+  </script>
+</body>
+
+</html>

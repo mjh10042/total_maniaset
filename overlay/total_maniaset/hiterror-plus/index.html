@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>judgement+</title>
+  <!-- The judgement bar (shared/tm-hiterror.js) with a row on top (shared/tm-hiterror-plus.js): this play's
+       accuracy and score on the left, a short time bar on the right. The opponent is judgement+vs's. -->
+  <link rel="stylesheet" href="../shared/tm-style.css" />
+  <style>
+    /* same page layout as the judgement page, 30 px taller for the row on top */
+    body { display: flex; justify-content: center; }
+  </style>
+  <script src="../shared/tm-core.js"></script>
+  <script src="../shared/tm-hiterror.js"></script>
+  <script src="../shared/tm-hiterror-plus.js"></script>
+</head>
+
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (TM.isStandalonePreview) document.body.classList.add('tm-preview');
+      const bar = new TM.HitErrorBar(document.body);
+      const plus = new TM.JudgementPlus(bar);
+      TM.instances = { bar, plus }; // handy from the devtools console
+      TM.settings(Object.assign({}, TM.HITERROR_DEFAULTS, TM.JPLUS_DEFAULTS), (s) => {
+        bar.applySettings(s);
+        plus.applySettings(s);
+      });
+      // each on its own, so a failure in one never holds back the other for that update
+      const each = (name, fn) => {
+        try {
+          fn();
+        } catch (err) {
+          console.error('[judgement+]', name, err);
+        }
+      };
+      TM.v2((d) => {
+        each('bar', () => bar.onV2(d));
+        each('row', () => plus.onV2(d));
+      }, TM.mergeFilters(TM.HITERROR_V2_FILTERS, TM.JPLUS_V2_FILTERS));
+      TM.precise((d) => bar.onPrecise(d), ['hitErrors', 'currentTime']);
+    });
+  </script>
+</body>
+
+</html>

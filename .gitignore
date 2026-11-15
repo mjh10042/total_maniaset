@@ -1,0 +1,15 @@
+# GitHub gets only the overlay, the README and the LICENSE.
+# Everything else stays on this PC: tools/ (build tools and local data; tools/_work holds the DanOverlay
+# extraction output from the user's DanOverlay.exe — do not publish), engine/ (the Python reference engine),
+# install_overlay.bat, .claude/ and .coverage.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/overlay/
+/overlay/*
+!/overlay/total_maniaset/
+/overlay/total_maniaset/data/
+__pycache__/
+*.pyc
+*.zip
