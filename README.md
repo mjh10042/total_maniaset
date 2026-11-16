@@ -129,7 +129,7 @@ total_maniaset은 MIT 라이선스입니다 (Copyright (c) 2026 kimlachal). 다�
 | 출처 | 링크 |
 | --- | --- |
 | Custom Hit Error Bar (breadles) — judgement | https://github.com/breadles5/customHitErrorBar |
-| hitcount (2ky) — hitcount Box | https://x.com/s2skky |
+| hitcount (2ky) — hitcount Box | https://github.com/2222zz/osu-custom-overlay |
 
 4K LN Course 모델 보정 데이터 (osu! 비트맵):
 [v2 Level 1](https://osu.ppy.sh/beatmapsets/891143) ·
