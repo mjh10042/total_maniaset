@@ -144,3 +144,5 @@ total_maniaset은 MIT 라이선스입니다 (Copyright (c) 2026 kimlachal). 다�
 [v3 Extra Level](https://osu.ppy.sh/beatmapsets/2243057) (hypersovae)
 
 `shared/engine/np.js` 끝의 Windows UCRT 수학 함수 재현부는 MIT 대상이 아닙니다 ([Universal C Runtime](https://learn.microsoft.com/en-us/cpp/windows/universal-crt-deployment)).
+
++ 참고 : 몇몇 부분은 AI를 사용했습니다
